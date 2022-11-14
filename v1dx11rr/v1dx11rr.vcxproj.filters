@@ -42,6 +42,9 @@
     <ClInclude Include="XACT3Util.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader.fx">
@@ -69,6 +72,9 @@
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
     <FxCompile Include="Modelo.fx">
+      <Filter>Archivos de código fuente</Filter>
+    </FxCompile>
+    <FxCompile Include="Text.fx">
       <Filter>Archivos de código fuente</Filter>
     </FxCompile>
   </ItemGroup>

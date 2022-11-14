@@ -10,6 +10,8 @@
 #include "Billboard.h"
 #include "ModeloRR.h"
 #include "XACT3Util.h"
+#include <sstream>
+#include "Text.h"
 
 class DXRR{	
 
@@ -56,6 +58,9 @@ public:
 	ModeloRR* pelota;
 	ModeloRR* juego;
 	ModeloRR* roca;
+	ModeloRR* kiosko1;
+	ModeloRR* kiosko2;
+	ModeloRR* kiosko3;
 
 	//MODELO ESCENARIO
 	ModeloRR* laberinto;
@@ -73,6 +78,9 @@ public:
 	vector2 uv2[32];
 	vector2 uv3[32];
 	vector2 uv4[32];
+	
+	                                   //Tipo texto
+	                                   Text* Coordenadas;
 
 	XACTINDEX cueIndex;
 	CXACT3Util m_XACT3;
@@ -80,6 +88,10 @@ public:
 	bool camaraTipo;
 	float rotCam;
 	
+	//void CollisionX(float, float , float , float , bool colision, int move);
+	//void CollisionZ(float P1, float P2, float P3, float P4, bool colision, int move);
+
+
     DXRR(HWND hWnd, int Ancho, int Alto)
 	{
 		breakpoint = false;
@@ -115,6 +127,9 @@ public:
 		//cesped = new ModeloRR(d3dDevice, d3dContext, "Assets/Cesped/Cesped.obj", L"Assets/Cesped/Cesped Color.png", L"Assets/Cesped/Cesped Specular.jpg", 0, 0);
 		banca = new ModeloRR(d3dDevice, d3dContext, "Assets/Banca/Banca.obj", L"Assets/Banca/Banca Color.png", L"Assets/Banca/Banca Specular.png", 0, 0);
 		//vehiculo = new ModeloRR(d3dDevice, d3dContext, "Assets/Auto/Cheep.obj", L"Assets/Auto/Cheep.jpg", L"Assets/Auto/CheepSpec.jpg", 0, 0);
+		kiosko1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_1.obj", L"Assets/Kiosko/Kiosko_1 Color.png", L"Assets/Kiosko/Kiosko_1 Specular.png", -74, 124);
+		kiosko2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_2.obj", L"Assets/Kiosko/Kiosko_2 Color.png", L"Assets/Kiosko/Kiosko_2 Specular.png", -74, 124);
+		kiosko3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_3.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", -74, 124);
 
 		//MODELO ESCENARIO PRINCIPAL
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/Laberinto Color.jpg", L"Assets/Laberinto/Laberinto Specular.jpg", 0, 0);
@@ -125,8 +140,11 @@ public:
 		//Camaras
 		camaraTipo = true;
 		rotCam = 300.0f;
-
 		
+		    //--Monse-- Texto
+		Coordenadas = new Text(d3dDevice, d3dContext, 3.6, 1.2, L"Assets/GUI/font.jpg", XMFLOAT4(0.5f, 0.6f, 0.8f, 1.0f));
+		
+
 	}
 
 	~DXRR()
@@ -315,6 +333,26 @@ public:
 
 		float camPosXZ[2] = { camara->posCam.x, camara->posCam.z };
 
+		//Temporizador
+		// -----La variable tiempo sería de tipo Text*
+		// ----Se crea un puntero arriba
+		//tiempo->DrawText(-0.95, 0.95, "Tiempo: " + tiempo->Time(segundos), 0.015);
+		
+	
+
+		//Ubicación tiempo real
+		stringstream ss;
+		ss << camara->posCam.x;
+		   Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
+		ss.str(std::string());
+		ss << camara->posCam.z;
+		   Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
+
+		   //DrawText(-0.9,);
+		
+
+
+
 		TurnOffDepth();
 		skydome->Render(camara->posCam);
 		TurnOnDepth();
@@ -341,6 +379,9 @@ public:
 		juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 		//cesped->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 		banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		kiosko1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		kiosko2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		kiosko3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 		//TEST MODEL
 		//plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 
@@ -352,6 +393,38 @@ public:
 		//vehiculo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(vehiculo->getPosX(), vehiculo->getPosZ()) + 2.5, camara->posCam, rotCam + XM_PI, 0, 'Y', 1, camaraTipo, true);
 
 		swapChain->Present( 1, 0 );
+
+		                     //***Collision(PX1, PX2, Pz1, Pz2, bool, int);***
+
+		//Colisión de una piedra cerca del laberinto
+	//	CollisionX(-139, -97, -19, true, 1);
+	//
+	//	//Unos pinos por el laberinto
+	//	CollisionX(-139, -135, -29, true, 1);
+	//
+	//	//Otra roca enorme
+	//	CollisionX(-149, -100, -82, true, 1);
+
+      #pragma region Las colisiones de la entrada frente al juego, que por extraña razón dejaron de jalar bien, aiuda
+		//Paredes del laberinto frente al parque de juegos 
+		/* 1.- */   CollisionX(-34, 68, 68, true, -1); //Pared interna de lab
+		            CollisionX(-34, 68, 73, true, 1); //pared externa¿
+				    CollisionZ(69, 73, -36, true, -1); //Donde me muevo en X
+
+					CollisionX(-94, -54, 74, true, 1); //Pared externa de lab
+			CollisionX(-89, -52, 68, true, -1); //interna
+			//CollisionZ(49, 72, -56, true, -1);
+			 CollisionZ(54, 71, -48, true, 1);
+#pragma endregion
+			 //--------------------------------------------------------------------
+
+			 //Colisiones de las otras paredes, no todas tienen unu
+				CollisionZ(-86, 66, 64, true, -1);
+				CollisionZ(-86, 66, 64, true, 1);
+					CollisionX(-93, 68, -92, true, -1); //este sí jala XD
+					CollisionX(-92, 66, -83, true, 1); //Este no, son la misma pared
+     
+
 	}
 
 	bool isPointInsideSphere(float* point, float* sphere) {
@@ -529,7 +602,36 @@ public:
 			uv3[j + 24].v = .75;
 			uv4[j + 24].v = 1;
 		}
+
+
+		
 	}
+
+	void CollisionX(float P1, float P2, float P3,  bool colision, int move)
+	{
+		if (colision)  
+		{	if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3 )
+				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
+		} 
+		
+		    
+	}
+
+	//Hace colisión en el eje Z y te empuja en X
+	void CollisionZ(float P1, float P2, float P3, bool colision, int move)
+	{
+		if (colision)
+		{
+
+			if (camara->posCam.z > P1 && camara->posCam.z < P2 && camara->posCam.x > P3)
+				camara->posCam.x = camara->posCam.x + move; // empuja en X
+		}
+		else 
+			if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3)
+				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
+	}
+
+	
 
 };
 #endif

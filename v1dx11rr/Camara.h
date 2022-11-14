@@ -7,6 +7,7 @@
 #include <d3d11.h>
 #include <D3DX11.h>
 #include <D3DX10math.h>
+#include "TerrenoRR.h"
 
 class Camara{
 public:

@@ -6,7 +6,10 @@
 
 #include <dinput.h>
 #include <xinput.h>
-
+#include "Camara.h"
+#include "ModeloRR.h"
+#include <sstream>
+#include "Text.h"
 
 #pragma comment (lib, "d3d11.lib")
 #pragma comment (lib, "d3dx11.lib")
@@ -14,6 +17,8 @@
 
 #define SCREEN_X 1920
 #define SCREEN_Y 1080
+
+using namespace std;
 
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -24,6 +29,12 @@ tagPOINT actualPoint;
 LPDIRECTINPUT8 m_pDirectInput = NULL;
 LPDIRECTINPUTDEVICE8 m_pKeyboardDevice = NULL;
 LPDIRECTINPUTDEVICE8 m_pMouseDevice = NULL;
+//Camara* camarita;
+D3DXVECTOR3* camarita;
+DXRR * camPos;
+Camara* CamPos;
+
+
 
 void createMouseDevice(HWND hWnd) {
     m_pDirectInput->CreateDevice(GUID_SysMouse, &m_pMouseDevice, 0);
@@ -167,7 +178,13 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
 			} break;
         
+                
+
+                     
+
         case WM_MOUSEMOVE: {
+
+          
 
             SetCursorPos(actualPoint.x, actualPoint.y);
             dxrr->frameBillboard++;
@@ -186,6 +203,14 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
             }
 
 
+            if(keyboardData[DIK_A] & 0x80) {
+                dxrr->izqder = -5.f;
+            }
+
+            if(keyboardData[DIK_D] & 0x80) {
+                dxrr->izqder = -5.f;
+            }
+
             if (keyboardData[DIK_W] & 0x80) {
                 dxrr->vel = 5.f;
             }
@@ -194,10 +219,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
                 dxrr->breakpoint = true;
             }
             
-            if (keyboardData[DIK_SPACE] & 0x80) {
-                MessageBox(hWnd, , L"", MB_OK);
-            }
+           // if (keyboardData[DIK_SPACE] & 0x80) {
+           //     MessageBox(hWnd, L"", L"", MB_OK);
+           // }
 
+            
 
 
 

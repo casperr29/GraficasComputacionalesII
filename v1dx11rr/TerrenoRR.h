@@ -8,8 +8,12 @@
 #include <DxErr.h>
 #include <D3Dcompiler.h>
 #include <d3dx10math.h>
+#include "Camara.h"
+#include "Text.h"
 
-class TerrenoRR{
+
+class TerrenoRR 
+{ 
 private:
 	struct VertexComponent
 	{
