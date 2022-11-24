@@ -58,9 +58,6 @@ public:
 	ModeloRR* pelota;
 	ModeloRR* juego;
 	ModeloRR* roca;
-	ModeloRR* kiosko1;
-	ModeloRR* kiosko2;
-	ModeloRR* kiosko3;
 
 	//MODELO ESCENARIO
 	ModeloRR* laberinto;
@@ -127,9 +124,6 @@ public:
 		//cesped = new ModeloRR(d3dDevice, d3dContext, "Assets/Cesped/Cesped.obj", L"Assets/Cesped/Cesped Color.png", L"Assets/Cesped/Cesped Specular.jpg", 0, 0);
 		banca = new ModeloRR(d3dDevice, d3dContext, "Assets/Banca/Banca.obj", L"Assets/Banca/Banca Color.png", L"Assets/Banca/Banca Specular.png", 0, 0);
 		//vehiculo = new ModeloRR(d3dDevice, d3dContext, "Assets/Auto/Cheep.obj", L"Assets/Auto/Cheep.jpg", L"Assets/Auto/CheepSpec.jpg", 0, 0);
-		kiosko1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_1.obj", L"Assets/Kiosko/Kiosko_1 Color.png", L"Assets/Kiosko/Kiosko_1 Specular.png", -74, 124);
-		kiosko2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_2.obj", L"Assets/Kiosko/Kiosko_2 Color.png", L"Assets/Kiosko/Kiosko_2 Specular.png", -74, 124);
-		kiosko3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_3.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", -74, 124);
 
 		//MODELO ESCENARIO PRINCIPAL
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/Laberinto Color.jpg", L"Assets/Laberinto/Laberinto Specular.jpg", 0, 0);
@@ -311,21 +305,21 @@ public:
 	
 	void Render(void)
 	{
-		rotCam  += izqder;
+		rotCam += izqder;
 		float sphere[3] = { 0,0,0 };
 		float prevPos[3] = { camara->posCam.x, camara->posCam.z, camara->posCam.z };
 		static float angle = 0.0f;
 		angle += 0.005;
 		if (angle >= 360) angle = 0.0f;
 		bool collide = false;
-		if( d3dContext == 0 )
+		if (d3dContext == 0)
 			return;
 
 		float clearColor[4] = { 0, 0, 0, 1.0f };
-		d3dContext->ClearRenderTargetView( backBufferTarget, clearColor );
-		d3dContext->ClearDepthStencilView( depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
+		d3dContext->ClearRenderTargetView(backBufferTarget, clearColor);
+		d3dContext->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
 
-		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 4.5 ;
+		camara->posCam.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 4.5;
 		camara->posCam3P.y = terreno->Superficie(camara->posCam.x, camara->posCam.z) + 6;
 		camara->UpdateCam(vel, arriaba, izqder);
 
@@ -337,19 +331,19 @@ public:
 		// -----La variable tiempo sería de tipo Text*
 		// ----Se crea un puntero arriba
 		//tiempo->DrawText(-0.95, 0.95, "Tiempo: " + tiempo->Time(segundos), 0.015);
-		
-	
+
+
 
 		//Ubicación tiempo real
 		stringstream ss;
 		ss << camara->posCam.x;
-		   Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
+		Coordenadas->DrawText(-0.95, 0.95, "X: " + ss.str(), 0.01);
 		ss.str(std::string());
 		ss << camara->posCam.z;
-		   Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
+		Coordenadas->DrawText(-0.95, 0.85, "Z: " + ss.str(), 0.01);
 
-		   //DrawText(-0.9,);
-		
+		//DrawText(-0.9,);
+
 
 
 
@@ -362,70 +356,141 @@ public:
 			-11, -78, 4, 5, uv1, uv2, uv3, uv4, frameBillboard);
 
 		//TurnOffAlphaBlending();
+
+		//--------------------------------------------------------MODELOS---------------------------------------
+		                      //model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      pinos->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      
+		                     
+		                      
+		                      pelota->Draw(camara->vista, camara->proyeccion, terreno->Superficie(pelota->getPosX(), pelota->getPosZ()), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      roca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      //cesped->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      //TEST MODEL
+		                      //plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      
+		                      //MODELO ESCENARIO PRINCIPAL
+		                      laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+		                      
+		                      //vehiculo->setPosX(camara->hdveo.x);
+		                      //vehiculo->setPosZ(camara->hdveo.z);
+		                      //vehiculo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(vehiculo->getPosX(), vehiculo->getPosZ()) + 2.5, camara->posCam, rotCam + XM_PI, 0, 'Y', 1, camaraTipo, true);
+		                      
+		                      
+	
+
+
+		//--------------------------------------------------COLISIONES------------------------------
 		
-		//MODELOS
-		//model->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		llave->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		pinos->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+					 //ESFERICAS--Chinga tu madre Hugo
+					//if (isPointInsideSphere(camara->getPos(), pelota->getSphere(5)))
+					//{
+					// //MessageBox(hWnd, L"Colision", L"Advertencia", MB_OK);
+					// camara->posCam = camara->pastPosCam;
+					//}
 
-		if (isPointInsideSphere(camara->getPos(), pelota->getSphere(5)))
-		{
-			//MessageBox(hWnd, L"Colision", L"Advertencia", MB_OK);
-			camara->posCam = camara->pastPosCam;
-		}
-
-		pelota->Draw(camara->vista, camara->proyeccion, terreno->Superficie(pelota->getPosX(), pelota->getPosZ()), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		roca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		juego->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		//cesped->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		kiosko1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		kiosko2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		kiosko3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		//TEST MODEL
-		//plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-
-		//MODELO ESCENARIO PRINCIPAL
-		laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-
-		//vehiculo->setPosX(camara->hdveo.x);
-		//vehiculo->setPosZ(camara->hdveo.z);
-		//vehiculo->Draw(camara->vista, camara->proyeccion, terreno->Superficie(vehiculo->getPosX(), vehiculo->getPosZ()) + 2.5, camara->posCam, rotCam + XM_PI, 0, 'Y', 1, camaraTipo, true);
-
-		swapChain->Present( 1, 0 );
-
+                             //LINEALES
 		                     //***Collision(PX1, PX2, Pz1, Pz2, bool, int);***
+	                             
+	                             	//Colisión de una piedra cerca del laberinto
+	                             //	CollisionX(-139, -97, -19, true, 1);
+	                             //
+	                             //	//Unos pinos por el laberinto
+	                             //	CollisionX(-139, -135, -29, true, 1);
+	                             //
+	                             //	//Otra roca enorme
+	                             //	CollisionX(-149, -100, -82, true, 1);
+	                             
+                             #pragma region Las colisiones de la entrada frente al juego, que por extraña razón dejaron de jalar bien, aiuda
+	                   //Colisiones en X
+	                    CollisionX(-34, 68, 68, 69, true, -1); //Pared interna de lab
+						
+						CollisionX(-89, -54, 68, 69, true, -1); //Pared interna de lab
+						CollisionX(-89, 64, -86, -85, true, 1); //Pared interna de lab
 
-		//Colisión de una piedra cerca del laberinto
-	//	CollisionX(-139, -97, -19, true, 1);
-	//
-	//	//Unos pinos por el laberinto
-	//	CollisionX(-139, -135, -29, true, 1);
-	//
-	//	//Otra roca enorme
-	//	CollisionX(-149, -100, -82, true, 1);
+						CollisionX(-34.8, 67, 72, 73, true, 1); //Pared EXTERNA de lab
+						CollisionX(-94.6, -51, 72, 73, true, 1); //Pared EXTERNA de lab
 
-      #pragma region Las colisiones de la entrada frente al juego, que por extraña razón dejaron de jalar bien, aiuda
-		//Paredes del laberinto frente al parque de juegos 
-		/* 1.- */   CollisionX(-34, 68, 68, true, -1); //Pared interna de lab
-		            CollisionX(-34, 68, 73, true, 1); //pared externa¿
-				    CollisionZ(69, 73, -36, true, -1); //Donde me muevo en X
+						CollisionX(-50, -31, 52, 53, true, 1); //Pared cerca de salida de laberinto
+						CollisionX(-54, -31, 47, 48, true, -1); //Pared cerca de salida
 
-					CollisionX(-94, -54, 74, true, 1); //Pared externa de lab
-			CollisionX(-89, -52, 68, true, -1); //interna
-			//CollisionZ(49, 72, -56, true, -1);
-			 CollisionZ(54, 71, -48, true, 1);
-#pragma endregion
-			 //--------------------------------------------------------------------
+						CollisionX(-34.9, -15, 33, 34, true, 1);
+						CollisionX(-70, -35, 13, 14, true, 1);
 
-			 //Colisiones de las otras paredes, no todas tienen unu
-				CollisionZ(-86, 66, 64, true, -1);
-				CollisionZ(-86, 66, 64, true, 1);
-					CollisionX(-93, 68, -92, true, -1); //este sí jala XD
-					CollisionX(-92, 66, -83, true, 1); //Este no, son la misma pared
-     
+						CollisionX(-69, -50, 28, 29, true, -1);
+						CollisionX(-69, -50, 33, 34, true, 1);
+
+						CollisionX(-74, -31, 8, 9, true, -1);
+						CollisionX(-31, -11, 27, 28, true, -1);
+
+						CollisionX(-121, -94.7, 73, 74, true, 1); //Rocas cerca del laberinto
+
+					     
+
+						//Colisiones en Z
+						CollisionZ(-25, 69, -90, -89, true, 1); //Pared interna lab
+						CollisionZ(-86, -49, -90, -89, true, 1); //Pared interna lab
+						CollisionZ(-86, 67, 63, 64, true, -1); //Pared interna lab
+
+						CollisionZ(53, 72, -50, -49, true, 1); //Pared cerca de salida
+						CollisionZ(67, 72, -36, -35, true, -1); //Pared cerca de salida
+						CollisionZ(49, 53, -30, -29, true, 1); //Pared cerca de salida
+						CollisionZ(48, 68, -56, -55, true, -1); //Pared cerca de salida
+						CollisionZ(13, 32.7, -36, -35, true, -1);
+
+						CollisionZ(32, 68.5, -16, -15, true, -1);
+
+						CollisionZ(12, 52.8, -70, -69, true, 1);
+						CollisionZ(8.9, 52.8, -76, -75, true, -1);
+
+						CollisionZ(9.41, 28.3, -30, -29, true, 1);
+						CollisionZ(29.6, 68, -10, -9, true, 1);
+
+	                        	           // CollisionX(-34, 68, 73, true, 1); //pared externa¿
+	                        			   // CollisionZ(69, 73, -36, true, -1); //Donde me muevo en X
+	                        
+	                        	//			CollisionX(-94, -54, 74, true, 1); //Pared externa de lab
+	                        	//	CollisionX(-89, -52, 68, true, -1); //interna
+
+
+	                        		//CollisionZ(49, 72, -56, true, -1);
+	                        		 //CollisionZ(54, 71, -48, true, 1);
+                                     #pragma endregion
+	                        		 //--------------------------------------------------------------------
+	                        
+	                        		 //Colisiones de las otras paredes, no todas tienen unu
+	                        			//CollisionZ(-86, 66, 64, true, -1);
+	                        			//CollisionZ(-86, 66, 64, true, 1);
+	                        				//CollisionX(-93, 68, -92, true, -1); //este sí jala XD
+	                        				//CollisionX(-92, 66, -83, true, 1); //Este no, son la misma pared
+	 swapChain->Present(1, 0);
 
 	}
+
+	void CollisionX(float P1, float P2, float P3, float P4 , bool colision, int move)
+	{
+		if (colision)
+		{
+			if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3 && camara->posCam.z < P4)
+				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
+		}
+
+	}
+
+	//Hace colisión en el eje Z y te empuja en X
+	void CollisionZ(float P1, float P2, float P3, float P4, bool colision, int move)
+	{
+		if (colision)
+		{
+			if (camara->posCam.z > P1 && camara->posCam.z < P2 && camara->posCam.x > P3 && camara->posCam.x < P4)
+				camara->posCam.x = camara->posCam.x + move; // empuja en X
+		}
+
+	}
+
 
 	bool isPointInsideSphere(float* point, float* sphere) {
 		bool collition = false;
@@ -437,6 +502,8 @@ public:
 			collition = true;
 		return collition;
 	}
+
+
 
 
 
@@ -607,30 +674,7 @@ public:
 		
 	}
 
-	void CollisionX(float P1, float P2, float P3,  bool colision, int move)
-	{
-		if (colision)  
-		{	if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3 )
-				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
-		} 
-		
-		    
-	}
-
-	//Hace colisión en el eje Z y te empuja en X
-	void CollisionZ(float P1, float P2, float P3, bool colision, int move)
-	{
-		if (colision)
-		{
-
-			if (camara->posCam.z > P1 && camara->posCam.z < P2 && camara->posCam.x > P3)
-				camara->posCam.x = camara->posCam.x + move; // empuja en X
-		}
-		else 
-			if (camara->posCam.x > P1 && camara->posCam.x < P2 && camara->posCam.z > P3)
-				camara->posCam.z = camara->posCam.z + move; //Empuja en Z
-	}
-
+	
 	
 
 };
