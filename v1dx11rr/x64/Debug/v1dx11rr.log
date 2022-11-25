@@ -1,4 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (Terreno.vcxproj, TerrenoSky.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+﻿D:\Visual Studio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (Terreno.vcxproj, TerrenoSky.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
   TerrenoSkyBill.cpp
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(56388): message : vea la definición anterior de 'DXGI_STATUS_OCCLUDED'
@@ -56,8 +56,8 @@ C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,1):
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(56841): message : vea la definición anterior de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(56850): message : vea la definición anterior de 'D3D10_ERROR_FILE_NOT_FOUND'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Camara.h(59,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Camara.h(59,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Camara.h(59,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Camara.h(59,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamath.h(2662,52): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamath.h(2662,64): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamath.h(2662,76): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
@@ -120,59 +120,59 @@ C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathvector.i
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(518,43): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(519,40): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
 C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\xnamathmisc.inl(519,51): warning C4838: la conversión de 'unsigned int' en 'INT' requiere una conversión de restricción
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(194,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(195,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(185,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(186,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(323,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(346,1): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(212,85): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(314,63): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(314,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(373,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(404,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(467,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoRR.h(469,19): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\ModeloRR.h(315,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\ModeloRR.h(315,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\ModeloRR.h(375,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\ModeloRR.h(408,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\ModeloRR.h(431,44): warning C4244: 'argumento': conversión de 'double' a 'FLOAT'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(139,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(312,1): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(322,78): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(340,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(343,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(414,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(415,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(420,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(429,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(442,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(446,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(447,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(449,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(450,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(627,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(628,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(629,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(630,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(638,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(639,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(640,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(641,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(650,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(651,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(652,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(653,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(662,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(663,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(664,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\DXRR.h(665,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(194,29): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(195,31): warning C4244: '=': conversión de 'float' a 'UINT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(185,33): warning C4101: 'renderTargetViewDesc': variable local sin referencia
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(186,35): warning C4101: 'shaderResourceViewDesc': variable local sin referencia
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(323,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(346,1): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(212,85): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(314,63): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(314,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(373,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(404,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(467,21): warning C4018: '<': no coinciden signed/unsigned
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoRR.h(469,19): warning C4018: '<': no coinciden signed/unsigned
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\ModeloRR.h(315,64): warning C4244: 'argumento': conversión de 'int' a 'FLOAT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\ModeloRR.h(315,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\ModeloRR.h(375,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\ModeloRR.h(408,1): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\ModeloRR.h(431,44): warning C4244: 'argumento': conversión de 'double' a 'FLOAT'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(145,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(318,1): warning C4305: '+=': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(328,78): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(346,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(349,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(424,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(425,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(430,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(439,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(452,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(456,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(457,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(459,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(460,1): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(637,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(638,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(639,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(640,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(648,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(649,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(650,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(651,28): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(660,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(661,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(662,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(663,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(672,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(673,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(674,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\DXRR.h(675,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoSkyBill.cpp(158,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoSkyBill.cpp(247,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoSkyBill.cpp(251,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoSkyBill.cpp(256,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\TerrenoSkyBill.cpp(257,34): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Montse\Documents\Gráficas C II\PF\PF\v1dx11rr\Text.h(180): warning C4715: 'Text::InitScene': no todas las rutas de acceso de control devuelven un valor
-  v1dx11rr.vcxproj -> C:\Users\Montse\Documents\Gráficas C II\PF\PF\x64\Debug\TerrenoSkyBill.exe
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoSkyBill.cpp(158,15): warning C4244: 'return': conversión de 'WPARAM' a 'int'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoSkyBill.cpp(247,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoSkyBill.cpp(251,70): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoSkyBill.cpp(256,33): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\TerrenoSkyBill.cpp(257,34): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\v1dx11rr\Text.h(180): warning C4715: 'Text::InitScene': no todas las rutas de acceso de control devuelven un valor
+  v1dx11rr.vcxproj -> D:\The Caballero Flowers\André\FCFM\Septimo Semestre\Graficas Computacionales II\Proyecto Final\GCII Github\GraficasComputacionalesII\x64\Debug\TerrenoSkyBill.exe

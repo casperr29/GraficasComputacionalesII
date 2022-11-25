@@ -58,6 +58,9 @@ public:
 	ModeloRR* pelota;
 	ModeloRR* juego;
 	ModeloRR* roca;
+	ModeloRR* kiosko1;
+	ModeloRR* kiosko2;
+	ModeloRR* kiosko3;
 
 	//MODELO ESCENARIO
 	ModeloRR* laberinto;
@@ -124,6 +127,9 @@ public:
 		//cesped = new ModeloRR(d3dDevice, d3dContext, "Assets/Cesped/Cesped.obj", L"Assets/Cesped/Cesped Color.png", L"Assets/Cesped/Cesped Specular.jpg", 0, 0);
 		banca = new ModeloRR(d3dDevice, d3dContext, "Assets/Banca/Banca.obj", L"Assets/Banca/Banca Color.png", L"Assets/Banca/Banca Specular.png", 0, 0);
 		//vehiculo = new ModeloRR(d3dDevice, d3dContext, "Assets/Auto/Cheep.obj", L"Assets/Auto/Cheep.jpg", L"Assets/Auto/CheepSpec.jpg", 0, 0);
+		kiosko1 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_1.obj", L"Assets/Kiosko/Kiosko_1 Color.png", L"Assets/Kiosko/Kiosko_1 Specular.png", -74, 124);
+		kiosko2 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_2.obj", L"Assets/Kiosko/Kiosko_2 Color.png", L"Assets/Kiosko/Kiosko_2 Specular.png", -74, 124);
+		kiosko3 = new ModeloRR(d3dDevice, d3dContext, "Assets/Kiosko/Kiosko_3.obj", L"Assets/Kiosko/Kiosko_3 Color.png", L"Assets/Kiosko/Kiosko_3 Specular.png", -74, 124);
 
 		//MODELO ESCENARIO PRINCIPAL
 		laberinto = new ModeloRR(d3dDevice, d3dContext, "Assets/Laberinto/Laberinto.obj", L"Assets/Laberinto/Laberinto Color.jpg", L"Assets/Laberinto/Laberinto Specular.jpg", 0, 0);
@@ -371,7 +377,11 @@ public:
 		                      banca->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 		                      //TEST MODEL
 		                      //plano->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
-		                      
+							  kiosko1->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+							  kiosko2->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+							  kiosko3->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
+
+
 		                      //MODELO ESCENARIO PRINCIPAL
 		                      laberinto->Draw(camara->vista, camara->proyeccion, terreno->Superficie(100, 20), camara->posCam, 10.0f, 0, 'A', 1, camaraTipo, false);
 		                      
